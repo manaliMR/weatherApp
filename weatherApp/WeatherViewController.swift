@@ -31,6 +31,9 @@ class WeatherViewController: UIViewController {
                 if let description = json["weather"] as? [[String:AnyObject]] {
                     print(description[0]["description"]!)
                 }
+                if let weather = json["main"] as? [String:AnyObject] {
+                    print(weather["temp"]!)
+                }
             } catch {
                 print("There was an error with JSON")
             }
