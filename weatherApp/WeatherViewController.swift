@@ -19,16 +19,21 @@ class WeatherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         CityName.text = cityName
 
         // Do any additional setup after loading the view.
+       
         print(cityName)
+       
         cityName = cityName.replacingOccurrences(of: " ", with: "%20")
         
         //// URL request sent using API
         
         let url : URL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=5e160fbfd243e76c231ddde2c3496ef1")!
+       
         let urlRequest = NSMutableURLRequest(url: url)
+       
         let session = URLSession.shared
         
         /// JSON format added
@@ -79,14 +84,5 @@ class WeatherViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

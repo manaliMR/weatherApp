@@ -30,6 +30,9 @@ class ViewController: UIViewController {
         
         performSegue(withIdentifier: "weather", sender: self)
     }
+    
+    // connection between two view controller
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var vc : WeatherViewController = segue.destination as! WeatherViewController
         vc.cityName = CityTextField.text!
