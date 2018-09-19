@@ -10,29 +10,43 @@ import UIKit
 
 class WeatherViewController: UIViewController {
     
+    @IBOutlet weak var CityName: UILabel!
+    
+    @IBOutlet weak var degreesLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
     var cityName = " "
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        CityName.text = cityName
 
         // Do any additional setup after loading the view.
         print(cityName)
         cityName = cityName.replacingOccurrences(of: " ", with: "%20")
-        let url : URL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=Name%205e160fbfd243e76c231ddde2c3496ef1")!
+        let url : URL = URL(string: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=5e160fbfd243e76c231ddde2c3496ef1")!
         let urlRequest = NSMutableURLRequest(url: url)
         let session = URLSession.shared
         
         let task = session.dataTask(with: urlRequest as URLRequest) {
             (data, response, error) -> Void in
+            
             do{
                 
             let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:AnyObject]
        
                 if let description = json["weather"] as? [[String:AnyObject]] {
-                    print(description[0]["description"]!)
+                    DispatchQueue.main.async {
+                         self.descriptionLabel.text = description[0]["description"]! as? String
+                    }
                 }
                 if let weather = json["main"] as? [String:AnyObject] {
                     print(weather["temp"]!)
+                    var finalTemp = weather["temp"]! as! Double
+                    finalTemp -= 273.0
+                    DispatchQueue.main.async {
+                        self.degreesLabel.text = "\(finalTemp)°"
+                    }
                 }
             } catch {
                 print("There was an error with JSON")

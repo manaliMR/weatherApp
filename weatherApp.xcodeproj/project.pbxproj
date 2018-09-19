@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1656C1B2151D141002992E8 /* clear-sky.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D1656C1A2151D141002992E8 /* clear-sky.jpg */; };
 		D194E97B214EFE330074092C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D194E97A214EFE330074092C /* AppDelegate.swift */; };
 		D194E97D214EFE330074092C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D194E97C214EFE330074092C /* ViewController.swift */; };
 		D194E980214EFE330074092C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D194E97E214EFE330074092C /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D1656C1A2151D141002992E8 /* clear-sky.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "clear-sky.jpg"; sourceTree = "<group>"; };
 		D194E977214EFE330074092C /* weatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D194E97A214EFE330074092C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D194E97C214EFE330074092C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				D194E9A8214F0C470074092C /* WeatherViewController.swift */,
 				D194E97E214EFE330074092C /* Main.storyboard */,
 				D194E981214EFE340074092C /* Assets.xcassets */,
+				D1656C1A2151D141002992E8 /* clear-sky.jpg */,
 				D194E983214EFE340074092C /* LaunchScreen.storyboard */,
 				D194E986214EFE340074092C /* Info.plist */,
 			);
@@ -235,6 +238,7 @@
 				D194E985214EFE340074092C /* LaunchScreen.storyboard in Resources */,
 				D194E982214EFE340074092C /* Assets.xcassets in Resources */,
 				D194E980214EFE330074092C /* Main.storyboard in Resources */,
+				D1656C1B2151D141002992E8 /* clear-sky.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
